@@ -1,13 +1,13 @@
 #ifndef _EXAMPLE_
 #define _EXAMPLE_
 
-#ifdef _cplusplus
+#ifdef __cplusplus
 extern "C" {
 #endif
 
 int example(int a, int b);
 
-#ifdef _cplusplus
+#ifdef __cplusplus
 }
 #endif
 #endif

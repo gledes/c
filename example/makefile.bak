@@ -1,0 +1,12 @@
+hello:lib
+	g++ main.cpp -o $@ -L. -lexample
+lib:example.o
+	g++ -shared $^ -o libexample.so
+main.o:main.cpp example.h
+	g++ -c -g -fPIC $<
+example.o:example.cpp example.h
+	g++ -c -g -fPIC $<
+clean:
+	rm hello *.o libexample.so
+#readelf -d
+#export LD_LIBRARY_PATH

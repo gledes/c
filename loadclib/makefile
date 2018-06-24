@@ -4,6 +4,8 @@ hello:libexample.so
 libexample.so:
 #	g++ -fPIC -shared build/example.c -o build/libexample.so
 	gcc -fPIC -shared build/example.c -o build/libexample.so
+dl:libexample.so
+	g++ dl.cpp -o hello -ldl
 clean:
 	rm hello build/libexample.so
 
